@@ -1,0 +1,60 @@
+/* ProfileScreen.css */
+
+.profile {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  #dark .profile{
+    background-color: #4b4e4d;
+  }
+
+
+
+
+  .heading {
+    font-size: 28px;
+    color: #007bff;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .subHeading {
+    font-size: 22px;
+    color: #17a2b8;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .project {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #dark .project{
+    color: #007bff;
+  }
+  
+  .contact {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #28a745;
+  }
+  
