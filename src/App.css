@@ -4,6 +4,37 @@
   box-sizing: border-box;
 }
 
+:root {
+  --light_background-color: #f3ebf6;
+  --dark_background-color: rgb(25, 53, 68);
+  --dark_text-color: white;
+}
+
+#light {
+  background-color: white;
+}
+
+#dark {
+  background-color: rgb(25, 53, 68);
+  color: var(--dark_text-color);
+}
+
+#navbar {
+  width: 100%;
+  box-shadow: 0 6px 5.62px rgba(0, 0, 0, 0.2);
+  elevation: 8;
+}
+
+#light #navbar {
+  width: 100%;
+}
+
+#dark #navbar {
+  box-shadow: 0 6px 5.62px rgba(149, 131, 131, 0.2);
+
+  width: 100%;
+}
+
 .nav_button {
   display: flex;
   justify-items: space-between;
