@@ -6,7 +6,8 @@
 
 :root {
   --light_background-color: #f3ebf6;
-  --dark_background-color: rgb(25, 53, 68);
+  --dark_navbackground-color: rgb(33, 38, 41);
+  --dark_background-color:#4b4e4d;
   --dark_text-color: white;
 }
 
@@ -15,7 +16,7 @@
 }
 
 #dark {
-  background-color: rgb(25, 53, 68);
+  background-color: var(--dark_background-color);
   color: var(--dark_text-color);
 }
 
@@ -30,9 +31,7 @@
 }
 
 #dark #navbar {
-  box-shadow: 0 6px 5.62px rgba(149, 131, 131, 0.2);
-
-  width: 100%;
+  background-color: var(--dark_navbackground-color);
 }
 
 .nav_button {
