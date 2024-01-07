@@ -4,7 +4,7 @@ import img from '../img/44649257.png'
 export default function HomePage() {
     const Year = new Date().getFullYear()
     return (
-        <div className="homepage">
+        <div className="homepage container">
             <header>
                 <h1>Welcome to My Portfolio</h1>
             </header>
