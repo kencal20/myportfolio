@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../img/logo512.png'
+import logo from '../../img/44649257.png'
 import { ThemeContext } from '../../App';
 import ReactSwitch from 'react-switch';
 export default function Navbar() {
@@ -34,7 +34,7 @@ export default function Navbar() {
                 <ThemeContext.Provider value={{ theme, toggleTheme }} >
                         <div className={`App ${theme}`}>
                             <div id='switch' style={{ display: 'flex', flexDirection: 'row' }}>
-                                <label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
+                                <label style={{paddingRight:10}}>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
                                 <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'} />
                             </div>
                         </div>
