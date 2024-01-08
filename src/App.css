@@ -7,7 +7,7 @@
 :root {
   --light_background-color: #f3ebf6;
   --dark_navbackground-color: rgb(33, 38, 41);
-  --dark_background-color:#4b4e4d;
+  --dark_background-color: #4b4e4d;
   --dark_text-color: white;
 }
 
@@ -49,4 +49,16 @@
 
 #logo {
   width: 50px;
+}
+
+.name {
+  font-size: 27px;
+  font-weight: 600;
+}
+#light .name {
+  color: navy;
+}
+
+#dark .name {
+  color: aqua;
 }
