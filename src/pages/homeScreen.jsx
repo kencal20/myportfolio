@@ -13,7 +13,7 @@ export default function HomePage() {
                 <div className="infoText">
 
 
-                    <p>Hi, my name is <span style={{ fontSize: 27, color: 'navy', fontWeight: '600' }}>Kenneth Adjei-mensah</span>  and I'm a Web developer as well as a Mobile developer. This is my portfolio website where you can learn more about me and see examples of my work.</p>
+                    <p>Hi, my name is <span className="name">Kenneth Adjei-mensah</span>  and I'm a Web developer as well as a Mobile developer. This is my portfolio website where you can learn more about me and see examples of my work.</p>
 
                     <Link to="/about" className="button">Learn More About Me</Link>
 
@@ -32,7 +32,7 @@ export default function HomePage() {
 
                 </div>
 
-                <img src={img} alt="My Profile Picture" />
+                <img src={img}alt='' />
             </main>
 
             <footer>
