@@ -3,14 +3,14 @@ import '../css/profile.css'
 export default function ProfileScreen() {
   return (
     <div className="profile container">
-      <h1 className="heading">Kenneth Adjei-mensah</h1>
+      <h1 className="name">Kenneth Adjei-mensah</h1>
 
       <p className="description">
         I am a software developer with 1 year of experience building web and mobile applications using React, Node.js, expo, and other modern technologies.
       </p>
 
       <div>
-        <h2 className="subHeading">Skills</h2>
+        <h2 className="subHeading ">Skills</h2>
         <ul className="list">
           <li>React</li>
           <li>Node.js</li>
@@ -34,6 +34,9 @@ export default function ProfileScreen() {
       </div>
 
       <div>
+      <h2 className="subHeading">Github Username</h2>
+          <p>kencal20</p>
+
         <h2 className="subHeading">Contact</h2>
         <p className="contact">
           Email: kenadjei20@gmail.com<br />

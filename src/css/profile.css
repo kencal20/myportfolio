@@ -1,18 +1,15 @@
 /* ProfileScreen.css */
 
 .profile {
-    max-width: 1000px;
+    width: 100%;
     margin: auto;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
+  
   }
   
   #dark .profile{
     background-color: #4b4e4d;
   }
-
-
 
 
   .heading {
@@ -28,6 +25,10 @@
   
   .subHeading {
     font-size: 22px;
+    color: #17a2b8;
+  }
+
+  #dark .subHeading{
     color: #17a2b8;
   }
   
