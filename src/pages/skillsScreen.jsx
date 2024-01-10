@@ -4,7 +4,7 @@ import  '../css/skills.css'
 export default function SkillsComponent() {
   return (
     <div className="skills-container container">
-      <h2>Skills</h2>
+      <h2 id='skillsHeading' >Skills</h2>
       <ul className="skills-list">
         <li>React</li>
         <li>Node.js</li>
