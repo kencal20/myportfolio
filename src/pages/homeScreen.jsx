@@ -9,12 +9,13 @@ export default function HomePage() {
                 <h1>Welcome to My Portfolio</h1>
             </header>
 
-            <main style={{ display: 'flex', flexDirection: 'row' }}>
+            <main>
                 <div className="infoText">
 
-
-                    <p>Hi, my name is <span className="name">Kenneth Adjei-mensah</span>  and I'm a Web developer as well as a Mobile developer. This is my portfolio website where you can learn more about me and see examples of my work.</p>
-
+                    <section className='intro'>
+                        <p>Hi, my name is <span className="name">Kenneth Adjei-mensah</span>  and I'm a Web developer as well as a Mobile developer. This is my portfolio website where you can learn more about me and see examples of my work.</p>
+                        <img src={img} alt=''  className='profile-pic' />
+                    </section>
                     <Link to="/about" className="button">Learn More About Me</Link>
 
                     <h2>My Skills</h2>
@@ -32,7 +33,7 @@ export default function HomePage() {
 
                 </div>
 
-                <img src={img}alt='' />
+
             </main>
 
             <footer>
