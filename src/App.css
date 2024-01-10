@@ -62,3 +62,11 @@
 #dark .name {
   color: aqua;
 }
+
+#light .navbar-toggler {
+  background-color: #565353;
+}
+
+#dark .navbar-toggler {
+  background-color: white;
+}
