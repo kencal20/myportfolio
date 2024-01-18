@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../img/44649257.png';
+import logo from '../../img/logo.png';
 import { ThemeContext } from '../../App';
 import ReactSwitch from 'react-switch';
 

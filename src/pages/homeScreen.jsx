@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img from '../img/44649257.png'
+import img from '../img/logo2.png'
 export default function HomePage() {
     const Year = new Date().getFullYear()
     return (
