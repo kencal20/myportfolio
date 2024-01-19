@@ -1,9 +1,14 @@
-import React, { useRef } from "react";
+import  { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../css/contact.css";
 
 const ContactScreen = () => {
   const form = useRef();
+  const [isEmailSent, setIsEmailSent] = useState(false);
+
+  const closeSuccessMesssage = () => {
+    setIsEmailSent(false);
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,16 +23,23 @@ const ContactScreen = () => {
       .then(
         (result) => {
           console.log(result.text);
-          form.current.reset()
+          form.current.reset();
+          setIsEmailSent(true);
+          console.log("isEmailSent:", isEmailSent);
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-
   return (
     <div className="contact-container container">
+      {isEmailSent && (
+        <div className="success-message">
+          Your email has been successfully sent!
+          <button id="exitsuccessMessage" onClick={closeSuccessMesssage}>X</button>
+        </div>
+      )}
       <h1>Contact Information</h1>
 
       <div className="contact-info">
