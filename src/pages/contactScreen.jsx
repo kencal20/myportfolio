@@ -1,14 +1,15 @@
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 import "../css/contact.css";
 
 const ContactScreen = () => {
   const form = useRef();
   const [isEmailSent, setIsEmailSent] = useState(false);
 
-  const closeSuccessMesssage = () => {
+  const closeSuccessMessage = () => {
     setIsEmailSent(false);
-  }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,6 +26,15 @@ const ContactScreen = () => {
           console.log(result.text);
           form.current.reset();
           setIsEmailSent(true);
+
+          // Show success SweetAlert
+          Swal.fire({
+            title: "Success!",
+            text: "Your email has been successfully sent!",
+            icon: "success",
+            confirmButtonText: "OK",
+          }).then(() => closeSuccessMessage());
+
           console.log("isEmailSent:", isEmailSent);
         },
         (error) => {
@@ -32,12 +42,15 @@ const ContactScreen = () => {
         }
       );
   };
+
   return (
     <div className="contact-container container">
       {isEmailSent && (
         <div className="success-message">
           Your email has been successfully sent!
-          <button id="exitsuccessMessage" onClick={closeSuccessMesssage}>X</button>
+          <button id="exitsuccessMessage" onClick={closeSuccessMessage}>
+            X
+          </button>
         </div>
       )}
       <h1>Contact Information</h1>
