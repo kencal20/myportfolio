@@ -65,6 +65,9 @@ html, body {
 min-height: 100vh;
 }
 
+#dark .container{
+min-height: auto;
+}
 .name {
   font-size: 27px;
   font-weight: 600;
