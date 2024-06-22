@@ -1,9 +1,58 @@
-import React from 'react';
-import '../css/contact.css';
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import "../css/contact.css";
 
 const ContactScreen = () => {
+  const form = useRef();
+  const [isEmailSent, setIsEmailSent] = useState(false);
+
+  const closeSuccessMessage = () => {
+    setIsEmailSent(false);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xc0z5nb",
+        "template_lq454ri",
+        form.current,
+        "k60Bc6ThjyTBNMXji"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          form.current.reset();
+          setIsEmailSent(true);
+
+          // Show success SweetAlert
+          Swal.fire({
+            title: "Success!",
+            text: "Your email has been successfully sent!",
+            icon: "success",
+            confirmButtonText: "OK",
+          }).then(() => closeSuccessMessage());
+
+          console.log("isEmailSent:", isEmailSent);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="contact-container container">
+      {isEmailSent && (
+        <div className="success-message">
+          Your email has been successfully sent!
+          <button id="exitsuccessMessage" onClick={closeSuccessMessage}>
+            X
+          </button>
+        </div>
+      )}
       <h1>Contact Information</h1>
 
       <div className="contact-info">
@@ -25,17 +74,15 @@ const ContactScreen = () => {
 
       <div className="contact-form">
         <h2>Get in Touch</h2>
-        <form>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+        <form ref={form} onSubmit={sendEmail}>
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="user_name" required />
+          <label>Email</label>
+          <input type="email" name="user_email" id="email" required />
+          <label>Message</label>
+          <textarea name="message" id="message" rows="4" required />
           <br />
-          <button type="submit">Send Message</button>
+          <input type="submit" value="Send" className=" btn btn-success" />
         </form>
       </div>
     </div>
